@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="logo.png">
+<title>Results</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="certificate">
+        <div class="content">
+        <div class="header">
+            <img src="1.png" alt="Left Image">
+            <div>
+                <img src="logo.png" alt="Center Logo" class="center-logo">
+                <div class="guru-dev">|| JAI SRI GURUDEV ||</div>
+                <div class="subtitle">Sri Adichunchanagiri Shikshana Trust (R.)</div>
+                <div class="title">BGS INDEPENDENT PU COLLEGE</div>
+                <div class="subtitle">TB Extension, Nagamangala, Mandya District. College Code - PP0102</div>
+            </div>
+            <img src="2.png" alt="Right Image">
+        </div>
+
+        <div class="search-section">
+            <input type="number" id="studentID" placeholder="Enter Student ID">
+            <button onclick="searchResults()">Search</button>
+        </div>
+
+        <div id="result-section" style="display: none;">
+            <h4>District Level Mid-term Examination, November -2024</h4>
+            <h4 id="student-name"></h4>
+            <h4 id="student-id"></h4>
+            
+            <table class="table">
+                <tr>
+                    <th>SUBJECT</th>
+                    <th>Max. Marks</th>
+                    <th>Sec. Marks</th>
+                </tr>
+                <tr>
+                    <td>Kannada</td>
+                    <td>80</td>
+                    <td id="kannada-result">0</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>80</td>
+                    <td id="english-result">0</td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>70</td>
+                    <td id="physics-result">0</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>70</td>
+                    <td id="chemistry-result">0</td>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td>80</td>
+                    <td id="mathematics-result">0</td>
+                </tr>
+                <tr>
+                    <td>Biology</td>
+                    <td>70</td>
+                    <td id="biology-result">0</td>
+                </tr>
+                <tr>
+                    <th>Total Marks</th>
+                    <th>450</th>
+                    <th id="grand-total">0</th>
+                </tr>
+            </table>
+            
+            <div class="details">
+                <p>Total Marks In Words: <b><span id="marks-in-words">Zero</span></b></p>
+                <p>Class Obtained: <b><span id="class-obtained">FAIL</span></b></p>
+                <p>Percentage: <b><span id="percentage">0.00</span>%</b></p>
+            </div>
+            
+            <div class="final-results">
+                <strong>Final Result: <span id="final-result">FAIL (Total: 0)</span></strong>
+            </div>
+            
+            <div class="print-button-container" style="text-align: center;">
+                <button class="print-button" onclick="printMarksheet()">Print Marksheet</button>
+            </div>
+    </div>
+</div>
+    <script src="scripts.js"></script>
+</body>
+</html>
