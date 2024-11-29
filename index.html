@@ -23,20 +23,22 @@
         </div>
 
         <div class="search-section">
-            <input type="number" id="studentID" placeholder="Enter Student ID">
+            <input type="text" id="studentID" placeholder="Enter Register Number">
             <button onclick="searchResults()">Search</button>
         </div>
 
         <div id="result-section" style="display: none;">
-            <h4>District Level Mid-term Examination, November -2024</h4>
+             
+            <h4 >District Level Mid-term Examination, November -2024</h4>
             <h4 id="student-name"></h4>
             <h4 id="student-id"></h4>
+            <h4 id="student-class"></h4>
             
             <table class="table">
                 <tr>
-                    <th>SUBJECT</th>
-                    <th>Max. Marks</th>
-                    <th>Sec. Marks</th>
+                    <th>Subject</th>
+                    <th>Maximum Marks</th>
+                    <th>Secured Marks</th>
                 </tr>
                 <tr>
                     <td>Kannada</td>
@@ -82,7 +84,7 @@
             </div>
             
             <div class="final-results">
-                <strong>Final Result: <span id="final-result">FAIL (Total: 0)</span></strong>
+                <strong> Result: <span id="final-result">FAIL (Total: 0)</span></strong>
             </div>
             
             <div class="print-button-container" style="text-align: center;">

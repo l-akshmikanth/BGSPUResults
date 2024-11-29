@@ -10,14 +10,15 @@ body {
     margin: auto;
 }
 
-.guru-dev, .title {
+.guru-dev {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 10px;
     color: #b38f00;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
-.header, .footer {
+.header,
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,19 +27,27 @@ body {
 
 .header img {
     width: 80px;
-    height: 100px;
+    height: 80px;
 }
 
-.title, .subtitle {
+.title,
+.subtitle {
     font-weight: bold;
 }
 
 .title {
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .subtitle {
-    font-size: 14px;
+    font-size: 12px;
+}
+
+#result-section h4 {
+    margin: 5px 0;
+    padding: 0;
+    line-height: 1.2;
+    font-weight: bold;
 }
 
 .certificate-title {
@@ -55,12 +64,15 @@ body {
     text-align: center;
 }
 
-.table, .table th, .table td {
+.table,
+.table th,
+.table td {
     border: 1px solid black;
     padding: 8px;
 }
 
-#student-name, #student-id {
+#student-name,
+#student-id {
     font-size: 20px;
     font-weight: bold;
     color: #333;
@@ -84,7 +96,6 @@ body {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
-    color: #333;
     text-align: center;
     padding: 15px;
     border: 1px solid #b38f00;
@@ -92,10 +103,25 @@ body {
     background-color: #fdf5e6;
 }
 
+.final-results.pass {
+    color: green;
+    border-color: green;
+    background-color: #e0f7e0;
+    /* Light green background */
+}
+
+.final-results.fail {
+    color: red;
+    border-color: red;
+    background-color: #f8d7da;
+    /* Light red background */
+}
+
 .final-results strong {
     font-size: 22px;
     color: #b38f00;
 }
+
 
 .print-button {
     margin-top: 20px;
@@ -173,11 +199,14 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: url('logo.png');
-    background-size: 200px; /* Adjust size as needed */
+    background-size: 200px;
+    /* Adjust size as needed */
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.3; /* Adjust transparency */
-    z-index: -1; /* Place it behind other content */
+    opacity: 0.3;
+    /* Adjust transparency */
+    z-index: -1;
+    /* Place it behind other content */
 }
 
 .content {
@@ -186,20 +215,17 @@ body::before {
 }
 
 .center-logo {
-    max-width: 100px; /* Adjust size as needed */
+    max-width: 100px;
+    
     height: auto;
     display: block;
-    margin: 0 auto 10px; /* Center the logo with margin */
+    margin: 0 auto 10px;
+    
 }
 
 
-/* Print-specific styles */
-
-
-
-
-/* Print-specific styles */
 @media print {
+
     /* Ensure watermark is visible */
     body::before {
         content: "";
@@ -208,33 +234,48 @@ body::before {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('logo.png'); /* Ensure the logo file path is correct */
-        background-size: 200px; /* Adjust size to fit nicely */
+        background-image: url('logo.png');
+        /* Ensure the logo file path is correct */
+        background-size: 200px;
+        /* Adjust size to fit nicely */
         background-repeat: no-repeat;
         background-position: center;
-        opacity: 0.2; /* Adjust transparency for a watermark effect */
-        z-index: -1; /* Place it behind content */
+        opacity: 0.2;
+        /* Adjust transparency for a watermark effect */
+        z-index: -1;
+        /* Place it behind content */
     }
 
     /* Ensure all content fits on one page */
     .certificate {
-        width: 100%; /* Use full page width */
-        max-width: 100%; /* Prevent extra margins */
-        margin: 0; /* Remove extra space around */
-        padding: 0; /* Avoid excess padding */
-        page-break-inside: avoid; /* Prevent content splitting */
+        width: 100%;
+        /* Use full page width */
+        max-width: 100%;
+        /* Prevent extra margins */
+        margin: 0;
+        /* Remove extra space around */
+        padding: 0;
+        /* Avoid excess padding */
+        page-break-inside: avoid;
+        /* Prevent content splitting */
     }
 
     /* Adjust table size */
     .table {
-        font-size: 12px; /* Slightly reduce font size to fit content */
-        width: 100%; /* Make table span full width */
+        font-size: 12px;
+        /* Slightly reduce font size to fit content */
+        width: 100%;
+        /* Make table span full width */
     }
 
     /* Adjust margins and paddings for all elements */
-    .content, .details, .final-results {
-        padding: 5px; /* Reduce padding for space */
-        margin: 0; /* Remove extra margin */
+    .content,
+    .details,
+    .final-results {
+        padding: 5px;
+        /* Reduce padding for space */
+        margin: 0;
+        /* Remove extra margin */
     }
 
     /* Hide search bar and print button */
@@ -252,4 +293,3 @@ body::before {
         margin: 0;
     }
 }
-
